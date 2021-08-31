@@ -1,4 +1,5 @@
 @import "reset.scss";
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
 
 .page-header{
   display: flex;
@@ -46,6 +47,32 @@
       text-transform: uppercase;
       text-decoration: none;
       padding: 20px;
+      &--active{
+        color: #03fc7f;
+      }
+    }
+  }
+  .jumbo-slider__elipsis{
+    width: 100px;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+
+    .jumbo-slider__circle{
+      width: 20px;
+      height: 20px;
+      border: 2px solid #03fc7f;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      &--filled{
+        background: #03fc7f;
+      }
     }
   }
 }
