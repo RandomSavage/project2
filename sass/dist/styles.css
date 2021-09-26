@@ -37,6 +37,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1;
+  background: #1b1b1b;
 }
 
 ol, ul {
@@ -58,6 +59,11 @@ table {
   border-spacing: 0;
 }
 
+body {
+  line-height: 1;
+  background: #1b1b1b;
+}
+
 .page-header {
   display: flex;
   justify-content: space-between;
@@ -72,6 +78,9 @@ table {
 .page-header .page-header__logo {
   color: #fff;
 }
+.page-header .page-header__logo span {
+  font-size: 20px;
+}
 .page-header .page-header__nav {
   color: #fff;
 }
@@ -82,12 +91,19 @@ table {
 }
 
 .jumbo-slider {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background: #1b1b1b;
+  margin-bottom: 2rem;
 }
 .jumbo-slider .jumbo-slider__container {
   position: relative;
+}
+.jumbo-slider .container {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 2rem;
 }
 .jumbo-slider .jumbo-slider__slide {
   width: 100%;
@@ -110,6 +126,67 @@ table {
   position: absolute;
   z-index: 1;
 }
+.jumbo-slider .jumbo-slider__slide .jumbo-slider__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+}
+.jumbo-slider .jumbo-slider__slide .jumbo-slider__info .jumbo-slider__slide-number {
+  font-size: 20rem;
+  font-weight: 700;
+  color: #03fc7f;
+  position: relative;
+  opacity: 0;
+  transform: translate3d(0, 100px, 0px);
+  transition: transform 0.4s ease-in-out 1s, opacity 0.4s ease-in-out 1s;
+  margin-bottom: 2rem;
+}
+.jumbo-slider .jumbo-slider__slide .jumbo-slider__info .jumbo-slider__slide-number--active {
+  opacity: 1;
+  transform: translate3d(0, 0px, 0px);
+}
+.jumbo-slider .jumbo-slider__slide .jumbo-slider__info .jumbo-slider__title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: #fff;
+  color: black;
+  padding: 10px;
+  width: fit-content;
+  position: relative;
+  opacity: 0;
+  transform: translate3d(0, 100px, 0px);
+  transition: transform 0.4s ease-in-out 1.5s, opacity 0.4s ease-in-out 1.5s;
+  margin-bottom: 2rem;
+}
+.jumbo-slider .jumbo-slider__slide .jumbo-slider__info .jumbo-slider__title--active {
+  opacity: 1;
+  transform: translate3d(0, 0px, 0px);
+}
+.jumbo-slider .jumbo-slider__slide .jumbo-slider__info .jumbo-slider__description {
+  max-width: 600px;
+  line-height: 1.3;
+  color: #1b1b1b;
+  background: #fff;
+  padding: 10px;
+  position: relative;
+  opacity: 0;
+  transform: translate3d(0, 100px, 0px);
+  transition: transform 0.4s ease-in-out 2s, opacity 0.4s ease-in-out 2s;
+  margin: 0px auto;
+  margin-bottom: 2rem;
+}
+.jumbo-slider .jumbo-slider__slide .jumbo-slider__info .jumbo-slider__description span {
+  font-size: 12px;
+}
+.jumbo-slider .jumbo-slider__slide .jumbo-slider__info .jumbo-slider__description--active {
+  opacity: 1;
+  transform: translate3d(0, 0px, 0px);
+}
 .jumbo-slider .jumbo-slider__nav {
   display: flex;
   position: absolute;
@@ -122,6 +199,7 @@ table {
 .jumbo-slider .jumbo-slider__nav .jumbo-slider__link {
   font-size: 1rem;
   color: #fff;
+  color: transparent;
   text-transform: uppercase;
   text-decoration: none;
   padding: 20px;
